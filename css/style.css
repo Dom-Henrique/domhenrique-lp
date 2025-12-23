@@ -25,11 +25,12 @@ body{
     align-items: center;
     background-color: var(--glass);
     backdrop-filter: blur(10px);
-    margin-top: 0px;
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 2rem;
+    padding: 1.5rem;
+    margin: 0 auto;
+    z-index: 1;
 }
 
 .nav-bar a{
@@ -64,8 +65,14 @@ body{
 .myavatar{
     width: 25%;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px var(--primary);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     margin: 6rem 0 6rem 0;
+    transition: .4s;
+}
+
+.myavatar:hover{
+    width: 26%;
+    transition: .4s;
 }
 
 .lkd img, .bhc img, .github img{
@@ -105,6 +112,14 @@ body{
 
 .skills img{
     height: 80px;
+    transition: .2s;
+}
+
+.skills img:hover{
+    height: 90px;
+    cursor: pointer;
+    transition: .2s;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5))
 }
 
 ul{
@@ -125,11 +140,8 @@ main{
 }
 
 .techs ul{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 4rem;
-    place-items: center;
-    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
     margin: 0 auto;
 }
 
@@ -138,5 +150,68 @@ h2{
 }
 
 .design{
-    margin: 10rem 0 10rem 0;
+    margin: 10rem 0 10rem 0;;
+}
+
+.theme img{
+    height: 40px;
+    filter: invert();
+    transition: .4s;
+}
+
+.theme img:hover{
+    height: 45px;
+    transition: .4s;
+}
+
+.theme{
+    background-color: transparent;
+    border: transparent;
+}
+
+.theme:hover{
+    cursor: pointer;
+}
+
+.design ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+summary{
+    text-align: center;
+}
+
+@media (min-width: 300px){
+    .myavatar{
+        width: 70%;
+    }
+
+    h2{
+        text-align: center;
+    }
+
+    body{
+        display: flex;
+        margin: 0 auto;
+        font-size: 10px;
+    }
+
+    .skills img{
+        height: 40px;
+    }
+
+    .nav-bar, .skills{
+        justify-content: center;
+    }
+
+    .lkd img, .bhc img, .github img{
+        height: 20px;
+        width: 20px;
+    }
+
+    .social-media{
+        justify-content: center;
+    }
 }
