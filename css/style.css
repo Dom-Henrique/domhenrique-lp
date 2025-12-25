@@ -2,7 +2,7 @@ html{
     scroll-behavior: smooth;
 }
 
-body{
+body:not(header){
     background-color: var(--secondary);
     color: var(--primary);
     font-size: 1.2rem;
@@ -63,21 +63,21 @@ body{
 }
 
 .myavatar{
-    width: 25%;
+    width: 100%;
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    margin: 6rem 0 6rem 0;
+    margin: 4rem 0 4rem 0;
     transition: .4s;
 }
 
 .myavatar:hover{
-    width: 26%;
+    width: 105%;
     transition: .4s;
 }
 
 .lkd img, .bhc img, .github img{
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     background-color: var(--primary);
     padding: 8px;
     border-radius: 10px;
@@ -85,8 +85,8 @@ body{
 }
 
 .lkd img:hover, .bhc img:hover, .github img:hover{
-    height: 45px;
-    width: 45px;
+    height: 55px;
+    width: 55px;
     filter: invert();
     backdrop-filter: invert();
     box-shadow: 0px 0px 40px var(--myshadow);
@@ -104,26 +104,26 @@ body{
     border-radius: 20px;
     margin-top: 4rem;
     margin-bottom: 4rem;
-    margin-left: 20%;
-    margin-right: 20%;
     backdrop-filter: blur(10px);
     text-align: center;
 }
 
 .skills img{
     height: 80px;
-    transition: .2s;
+    transition: .4s;
 }
 
 .skills img:hover{
     height: 90px;
     cursor: pointer;
-    transition: .2s;
+    transition: .4s;
     filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5))
 }
 
 ul{
     list-style: none;
+    margin: 0 auto;
+    padding: 0;
 }
 
 :root{
@@ -134,15 +134,14 @@ ul{
 }
 
 main{
-    margin-top: 6rem;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 4rem 40% 0 40%;
 }
 
 .techs ul{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 0 auto;
+    gap: 20px;
 }
 
 h2{
@@ -150,7 +149,7 @@ h2{
 }
 
 .design{
-    margin: 10rem 0 10rem 0;;
+    margin: 4rem 0 4rem 0;;
 }
 
 .theme img{
@@ -176,16 +175,22 @@ h2{
 .design ul{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 20px;
 }
 
 summary{
     text-align: center;
 }
 
-@media (min-width: 300px){
+@media (max-width: 300px){
     .myavatar{
         width: 70%;
+        margin: 1rem auto;
+    }
+
+    .myavatar:hover{
+        width: 75%;
     }
 
     h2{
@@ -194,12 +199,17 @@ summary{
 
     body{
         display: flex;
+        justify-content: space-between;
         margin: 0 auto;
         font-size: 10px;
     }
 
     .skills img{
         height: 40px;
+    }
+
+    .skills img:hover{
+        height: 45px;
     }
 
     .nav-bar, .skills{
@@ -211,7 +221,25 @@ summary{
         width: 20px;
     }
 
+    .lkd img:hover, .bhc img:hover, .github img:hover{
+        height: 25px;
+        width: 25px;
+    }
+
     .social-media{
         justify-content: center;
+    }
+
+    .techs, .design{
+        justify-content: center;
+    }
+
+    .nav-bar{
+        justify-content: space-evenly;
+        padding: 20px;
+    }
+
+    section{
+        margin: 0 auto;
     }
 }
