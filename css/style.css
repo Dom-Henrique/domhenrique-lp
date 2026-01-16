@@ -6,31 +6,51 @@ body:not(header){
     background-color: var(--secondary);
     color: var(--primary);
     font-size: 1.2rem;
+    margin: 0 auto;
+    font-family: "Quicksand", sans-serif;
+}
+
+.banner{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    backdrop-filter: blur(4px);
 }
 
 .introduction{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column
+    background-image: url('../assets/images/naoseioqcolocar.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .presentation h1, .presentation h2{
     text-align: center;
+    text-shadow: 0 0 10px var(--myshadow);
+    font-size: 50px;
+    line-height: 30px;
 }
 
-.nav-bar{
+header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--glass);
     backdrop-filter: blur(10px);
     position: fixed;
+    padding: 10px;
     top: 0;
     width: 100%;
-    padding: 1.5rem;
-    margin: 0 auto;
+    padding: 15px;
     z-index: 1;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 10px;
 }
 
 .nav-bar a{
@@ -40,6 +60,9 @@ body:not(header){
     transition: .4s;
 }
 
+.nav-bar a:hover{
+    color: rgb(164, 103, 62)
+}
 
 .menu-link{
     position: relative;
@@ -53,68 +76,66 @@ body:not(header){
     bottom: 0;
     margin-top: 4px;
     left: 0;
-    background-color: white;
+    background-color: var(--primary);
     transition: .4s;
 }
 
 .menu-link:hover::after{
     width: 100%;
     transition: .4s;
+    background-color: rgb(164, 103, 62);
 }
 
 .myavatar{
-    width: 100%;
+    width: 600px;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.8);
     margin: 4rem 0 4rem 0;
-    transition: .4s;
 }
 
-.myavatar:hover{
-    width: 105%;
-    transition: .4s;
-}
-
-.lkd img, .bhc img, .github img{
-    height: 50px;
+.lkd i, .bhc i, .github i, .insta i{
     width: 50px;
+    height: 50px;
+    font-size: 40px;
     background-color: var(--primary);
     padding: 8px;
     border-radius: 10px;
     transition: .4s;
+    color: var(--secondary);
+    margin: 0 auto;
 }
 
-.lkd img:hover, .bhc img:hover, .github img:hover{
-    height: 55px;
-    width: 55px;
+.lkd i:hover, .bhc i:hover, .github i:hover, .insta i:hover{
     filter: invert();
+    font-size: 45px;
     backdrop-filter: invert();
     box-shadow: 0px 0px 40px var(--myshadow);
     transition: .2s;
 }
 
-.social-media{
+.about-me{
     display: flex;
-    justify-content: center;
-}
-
-.effect{
-    border: solid 1px rgba(255, 255, 255, 0.5);
-    padding: 2rem;
-    border-radius: 20px;
-    margin-top: 4rem;
+    gap: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 6rem 0 6rem;
     margin-bottom: 4rem;
-    backdrop-filter: blur(10px);
     text-align: center;
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
-.skills img{
-    height: 80px;
+.skills{
+    margin: 4rem 0 4rem 0;
+}
+
+.skills i{
+    font-size: 50px;
     transition: .4s;
 }
 
-.skills img:hover{
-    height: 90px;
+.skills i:hover{
+    font-size: 55px;
     cursor: pointer;
     transition: .4s;
     filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.5))
@@ -133,10 +154,6 @@ ul{
     --glass: #1313139f;
 }
 
-main{
-    margin: 4rem 40% 0 40%;
-}
-
 .techs ul{
     display: flex;
     justify-content: center;
@@ -146,12 +163,18 @@ main{
 
 h2{
     text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.about-me h2{
+    font-size: 40px;
+    text-align: left;
 }
 
 .design{
-    margin: 4rem 0 4rem 0;;
+    margin: 4rem 0 4rem 0;
 }
-
+/*
 .theme img{
     height: 40px;
     filter: invert();
@@ -161,85 +184,106 @@ h2{
 .theme img:hover{
     height: 45px;
     transition: .4s;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255));
 }
 
 .theme{
     background-color: transparent;
     border: transparent;
+    transition: .4s;
 }
 
 .theme:hover{
     cursor: pointer;
+    transition: .4s;
 }
-
+*/
 .design ul{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
 }
 
 summary{
     text-align: center;
 }
 
-@media (max-width: 300px){
-    .myavatar{
-        width: 70%;
-        margin: 1rem auto;
-    }
+.avatar2nd{
+    min-height: auto;
+    min-width: auto;
+    filter:grayscale() drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.3));
+}
 
-    .myavatar:hover{
-        width: 75%;
-    }
+main{
+    margin-top: 5rem;
+}
 
-    h2{
-        text-align: center;
-    }
+.text{
+    text-align: justify;
+}
 
-    body{
-        display: flex;
-        justify-content: space-between;
-        margin: 0 auto;
-        font-size: 10px;
-    }
+.logotipo{
+    font-family: 'Courier New', Courier, monospace;
+}
 
-    .skills img{
-        height: 40px;
-    }
+.briefing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin: 6rem 0 6rem 0;
+    gap: 150px;
+}
 
-    .skills img:hover{
-        height: 45px;
-    }
+.briefing>img{
+    border-radius: 50%;
+    filter: grayscale() drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
+    width: 600px;
+}
 
-    .nav-bar, .skills{
-        justify-content: center;
-    }
+.social-media{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: fit-content;
+    gap: 20px;
+    align-items: center;
+}
 
-    .lkd img, .bhc img, .github img{
-        height: 20px;
-        width: 20px;
-    }
+.briefing>.presentation{
+    display: flex;
+    flex-direction: column;
+}
 
-    .lkd img:hover, .bhc img:hover, .github img:hover{
-        height: 25px;
-        width: 25px;
-    }
+.presentation h3{
+    text-align: center;
+    font-size: 30px
+}
 
-    .social-media{
-        justify-content: center;
-    }
+.wpp{
+    background-color: var(--primary);
+    border: none;
+    font-size: 15px;
+    padding: 8px;
+    border-radius: 10px;
+    transition: .4s;
+    cursor: pointer;;
+}
 
-    .techs, .design{
-        justify-content: center;
-    }
+.wpp:hover{
+    filter:invert();
+    transition: .4s;
+    border: solid 1px var(--secondary)
+}
 
-    .nav-bar{
-        justify-content: space-evenly;
-        padding: 20px;
-    }
+.wpp a{
+    text-decoration: none;
+    color: var(--secondary)
+}
 
-    section{
-        margin: 0 auto;
-    }
+.me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
