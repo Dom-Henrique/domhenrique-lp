@@ -7,94 +7,74 @@
     <title>Dom Henrique</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/images/Avatar - 2025.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
+        <a class="logotipo">Dom Henrique</a>
         <nav class="nav-bar">
             <a href="#introduction" class="menu-link">Início</a>
+            <a href="#about-me" class="menu-link">Sobre mim</a>
             <a href="#skills" class="menu-link">Skills</a>
+            <a href="#services" class="menu-link">Serviços</a>
             <a href="#contact" class="menu-link">Contato</a>
-            <!--
-            <button type="button" class="theme" onclick="toggleTheme(document)"><img src="assets/images/Buttons/sun.png"></button>
-            -->
         </nav>
+        <button type="button" class="wpp"><i class="fa-solid fa-envelope"></i> <a href="mailto:joaohenrique.programming@gmail.com">Falar Comigo</a></button>
     </header>
     <main>
         <section class="introduction" id="introduction">
-            <div class="presentation">
-                <h1>Prazer, Dom Henrique!</h1>
-                <h2 class="subtitle">Designer & Desenvolvedor</h2>
-
+            <div class="banner">
+                <div class="presentation">
+                    <h1>Prazer, Dom Henrique!</h1>
+                    <h2 class="subtitle">Desenvolvedor Full-Stack</h2>
+                </div>
+                <img src="assets/images/Dom lindo.jpg" class="myavatar">
             </div>
-            <img src="assets/images/Dom lindo.jpg" class="myavatar">
         </section>
-        <section class="social-media">
+        <section class="briefing">
+            <div class="me">
+                <h2>Quem sou eu?</h2>
+                <ul>
+                    <li><i class="fa-solid fa-book-bible"></i> Católico Apostólico Romano</li>
+                    <li><i class="fa-solid fa-code"></i> Desenvolvedor Full-Stack</li>
+                    <li><i class="fa-solid fa-laptop"></i> Estudante de Ciência da Computação</li>
+                    <li><i class="fa-solid fa-paintbrush"></i> Roteirista & Artista</li>
+                </ul>
+                <h3>Redes Sociais</h3>
+                <section class="social-media">
+                    <a href="https://www.linkedin.com/in/dom-henrique" target="_blank" class="lkd"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.behance.net/domhenrique1" target="_blank" class="bhc"><i class="fa-brands fa-behance"></i></a>
+                    <a href="https://github.com/Dom-Henrique" target="_blank" class="github"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/odomhenriq" target="_blank" class="insta"><i class="fa-brands fa-instagram"></i></a>
+                </section>
+                <section class="skills" id="skills">
+                <div class="techs">
+                    <!---
+                    <h2>Tecnologias que uso</h2>
+                -->
+                    <ul>
+                        <li><i class="fa-solid fa-c" title="C"></i></li>
+                        <li><i class="fa-brands fa-java" title="Java"></i></li>
+                        <li><i class="fa-brands fa-python" title="Python"></i></li>
+                        <li><i class="fa-brands fa-html5" title="HTML5"></i></li>
+                        <li><i class="fa-brands fa-css3" title="CSS3"></i></li>
+                        <li><i class="fa-brands fa-js" title="JS"></i></li>
+                       <!----
+                        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" /></li>
+                        <li><img src="assets/images/Tech/IntelliJ IDEA.png" alt="" srcset=""></li>
+                        <li><img src="assets/images/Tech/Affinity.png"></li>
+                        <li><img src="assets/images/Tech/Canva.png" alt="" srcset=""></li>
+                        <li><img src="assets/images/Tech/Ubuntu.png"></li>
+                        <li><img src="assets/images/Tech/W11.png" alt="" srcset=""></li>
+                    -->
+                    </ul>
+                </div>
             <!--
-            <figure class="lkd">
-                <a href="https://www.linkedin.com/in/dom-henrique" target="_blank"><img
-                        src="assets/images/Social Media Icons/LinkedIn.png" alt="" title="LinkedIn"></a>
-            </figure>
-        -->
-            <figure class="bhc">
-                <a href="https://www.behance.net/domhenrique1" target="_blank"><img
-                        src="assets/images/Social Media Icons/Behance.png" alt="" title="Behance"></a>
-            </figure>
-            <figure class="github">
-                <a href="https://github.com/Dom-Henrique" target="_blank"><img
-                        src="assets/images/Social Media Icons/GitHub.png" alt="" title="GitHub"></a>
-            </figure>
-        </section>
-        <section class="about-me">
-            <div class="effect">
-                <p>Sou apaixonado por tecnologia desde a infância, e acredito no seu poder de transformar o mundo. Atualmente sou estudante de Ciência da Computação e designer gráfico estratégico, ajudando clientes a posicionarem as suas marcas no meio digital.</p>
-                <h2>Sobre mim</h2>
-                <ul>
-                    <li>Brasileiro</li>
-                    <li>Católico Apostólico Romano</li>
-                    <li>Apaixonado por tecnologia</li>
-                    <li>Entusiasta de design gráfico</li>
-                    <li>18 anos</li>
-                    
-                </ul>
-            </div>
-        </section>
-        <section class="skills" id="skills">
-            <div class="techs">
-                <h2>Tecnologias que uso</h2>
-                <ul>
-                    <li>
-                        <img src="https://skillicons.dev/icons?i=c" height="50" alt="c logo" title="C"/>
-                    </li>
-
-                    <li>
-                        <img src="https://skillicons.dev/icons?i=java" height="50" alt="java logo" title="Java" />
-                    </li>
-
-                    <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                            height="50" alt="python logo" title="Python" />
-                    </li>
-
-                    <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                            height="50" alt="html5 logo" title="HTML5" />
-                    </li>
-
-                    <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="50"
-                            alt="css logo" title="CSS3" />
-                    </li>
-
-                    <li>
-                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                            height="50" alt="javascript logo" title="JavaScript" />
-                    </li>
-
-                </ul>
-            </div>
             <div class="design">
-                <h2>Softwares que uso</h2>
                 <ul>
                     <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" /></li>
                     <li><img src="assets/images/Tech/IntelliJ IDEA.png" alt="" srcset=""></li>
@@ -104,9 +84,28 @@
                     <li><img src="assets/images/Tech/W11.png" alt="" srcset=""></li>
                 </ul>
             </div>
+        -->
         </section>
-        <section class="contact" id="contact">
-            <h2>Vamos evoluir sua marca?</h2>
+            </div>
+            <img src="assets/images/Eu em Martins.jpg" alt="">
+        </section>
+        <section id="about-me">
+            <div class="about-me">
+                <img src="assets/images/Juliu Cesar.png" alt="" srcset="" class="avatar2nd">
+                <div class="text">
+                    <h2>Sobre mim</h2>
+                    <p>
+                        Acredito que a Matemática e a Física são as linguagens fundamentais do universo, e é nessa busca pela precisão que encontro minha identidade como desenvolvedor. Utilizo o C para afiar minha lógica e o Java para estruturar sistemas robustos, tratando cada linha de código como uma tradução da ordem natural das coisas. Para mim, o desenvolvimento backend não é apenas funcionalidade, mas a construção de uma base sólida, eficiente e matematicamente elegante.
+                    </p>
+
+                    <p>
+                        Aliando essa força técnica ao meu olhar como Designer de Autoridade, utilizo HTML, CSS e Python para dar vida e presença a essas estruturas. Meu objetivo é transformar a complexidade em interfaces que comunicam confiança e impacto imediato. Como desenvolvedor Fullstack, busco a harmonia entre o rigor da engenharia e a estratégia do design, entregando soluções que não apenas resolvem problemas, mas refletem a autoridade que cada projeto merece.
+                    </p>
+                    <br>
+                    <br>
+                    <cite style="font-size: 2rem;">"Quando nos acomodamos à rotina da vida, perdemos, pouco a pouco, o pulso de nós mesmos, deixando o nosso processo de crescimento à mercê das influências e das circunstâncias externas."<br><br>- Júlio César</cite>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
