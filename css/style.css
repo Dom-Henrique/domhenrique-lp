@@ -8,6 +8,8 @@ body:not(header){
     font-size: 1.2rem;
     margin: 0 auto;
     font-family: "Quicksand", sans-serif;
+    width: 100vw;
+    height: 100vw;;
 }
 
 .banner{
@@ -61,7 +63,7 @@ header{
 }
 
 .nav-bar a:hover{
-    color: rgb(164, 103, 62)
+    color: rgb(231, 55, 55)
 }
 
 .menu-link{
@@ -83,7 +85,7 @@ header{
 .menu-link:hover::after{
     width: 100%;
     transition: .4s;
-    background-color: rgb(164, 103, 62);
+    background-color: rgb(231, 55, 55);
 }
 
 .myavatar{
@@ -119,14 +121,14 @@ header{
     justify-content: space-evenly;
     align-items: center;
     padding: 0 6rem 0 6rem;
-    margin-bottom: 4rem;
+    margin: 100px 0 100px 0;
     text-align: center;
     background-color: var(--primary);
     color: var(--secondary);
 }
 
 .skills{
-    margin: 4rem 0 4rem 0;
+    margin: 100px 0 100px 0;
 }
 
 .skills i{
@@ -152,6 +154,8 @@ ul{
     --secondary: #202020;
     --myshadow: #212121;
     --glass: #1313139f;
+    --red: #ab3232;
+    --bege: #c2997a;
 }
 
 .techs ul{
@@ -162,42 +166,17 @@ ul{
 }
 
 h2{
-    text-align: center;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .about-me h2{
-    font-size: 40px;
+    font-size: 50px;
     text-align: left;
 }
 
 .design{
     margin: 4rem 0 4rem 0;
 }
-/*
-.theme img{
-    height: 40px;
-    filter: invert();
-    transition: .4s;
-}
-
-.theme img:hover{
-    height: 45px;
-    transition: .4s;
-    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255));
-}
-
-.theme{
-    background-color: transparent;
-    border: transparent;
-    transition: .4s;
-}
-
-.theme:hover{
-    cursor: pointer;
-    transition: .4s;
-}
-*/
 .design ul{
     display: flex;
     flex-direction: row;
@@ -216,7 +195,7 @@ summary{
 }
 
 main{
-    margin-top: 5rem;
+    margin: 70px 0 100px 0;
 }
 
 .text{
@@ -232,7 +211,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
-    margin: 6rem 0 6rem 0;
+    margin: 100px 0 100px 0;
     gap: 150px;
 }
 
@@ -240,6 +219,11 @@ main{
     border-radius: 50%;
     filter: grayscale() drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.3));
     width: 600px;
+    transition: .4s;
+}
+.briefing img:hover{
+    transform: scale(1.05);
+    transition: .4s;
 }
 
 .social-media{
@@ -286,4 +270,110 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.hobbies h2, .art-title{
+    text-align: center;
+    font-size: 50px;
+}
+.hobbies ul{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    width: fit-content;
+    column-gap: 100px;
+}
+.hobby{
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    min-width: fit-content;
+    gap: 40px;
+    margin: 100px 0 100px 0;
+}
+.hobby i{
+    font-size: 80px;
+}
+.album{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+}
+.album img{
+    width: 400px;
+}
+.cbj{
+    visibility:hidden
+}
+.album button{
+    background-color: transparent;
+    border: none;
+}
+.album button:hover{
+    cursor: pointer;
+}
+.end{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0 100px 0;
+    font-size: 20px;
+}
+.end h2, .end strong{
+    color:#f31f1f;
+}
+.mc strong, .mc h2{
+    color: var(--bege);
+}
+.end img, .mc img{
+    width: 500px;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    border-radius: 15px;
+    background-color: transparent;
+    transition: .4s;
+}
+.end img:hover, .mc img:hover{
+    box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.3);
+}
+#end-image, #cm-image{
+    background-color: transparent;
+    border-radius: 15px;
+    border: none;
+    transition: .4s;
+}
+#end-image:hover{
+    cursor: pointer;
+    transform: translateX(100px);
+    transition: .4s;
+}
+#cm-image:hover{
+    cursor: pointer;
+    transform: translateX(-100px);
+    transition: .4s;
+}
+.explanation{
+    width: 600px;
+    text-align: justify;
+    transition: .4s;
+}
+.explanation:hover{
+    transform: translateX(-100px);
+    transition: .4s;
+}
+.mc .explanation:hover{
+    transform: translateX(100px);
+    transition: .4s;
+}
+.mc{
+    display: flex;
+    align-items: center;
+    margin: 100px 0 100px 0;
+    font-size: 20px;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+footer{
+    padding: 40px;
 }
