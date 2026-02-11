@@ -165,7 +165,7 @@ ul{
     gap: 20px;
 }
 
-h2{
+h2, .projects h3{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -224,6 +224,8 @@ main{
 }
 .briefing img:hover{
     transform: scale(1.05);
+    box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.3);
+    cursor: pointer;
     transition: .4s;
 }
 
@@ -272,7 +274,7 @@ main{
     justify-content: center;
     align-items: center;
 }
-.hobbies h2, .art-title{
+.hobbies h2, .art-title, .projects h2{
     text-align: center;
     font-size: 50px;
 }
@@ -388,7 +390,40 @@ main{
 footer{
     padding: 40px;
 }
-@media (min-width:430px) and (max-width: 840px){
+.projects li{
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    flex-direction: row-reverse;
+    font-size: 30px;
+    text-align: justify;
+    gap: 100px;
+}
+.projects li:nth-child(2n){
+    flex-direction: row;
+}
+.projects li:nth-child(2n+1){
+    flex-direction: row-reverse;
+}
+.projects a{
+    transition: .4s;
+}
+.projects a:hover{
+    transform: scale(1.05);
+    transition: .4s;
+}
+.projects img{
+    width: 1000px;
+    border-radius: 20px;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    transition: .4s;
+}
+.projects img:hover{
+    box-shadow: 0px 0px 60px rgba(255, 255, 255, 0.3);
+    transition: .4s;
+}
+@media (min-width:400px) and (max-width: 840px){
     body{
         width: 100%;
     }
@@ -413,11 +448,11 @@ footer{
         display: none;
     }
     header{
-        font-size: 18px;
+        font-size: 16px;
         align-items: center;
         justify-content: center;
-        width: 100%;
-        padding: 16px;
+        min-width: 400px;
+        width: 80%;
         position: static;
     }
     .briefing{
@@ -494,5 +529,29 @@ footer{
     }
     .text{
         width: 80%
+    }
+    .projects{
+        padding: 0px;
+        min-width: 410px;
+        width: 80%;
+    }
+    .projects li:nth-child(2n){
+        flex-direction: column-reverse;
+        gap: 0px;
+        font-size: 20px;
+        align-items: center;
+    }
+    .projects li:nth-child(2n+1){
+        flex-direction: column-reverse;
+        gap: 0px;
+        font-size: 20px;
+        align-items: center;
+    }
+    .projects img{
+        width: 200px;
+        aspect-ratio: 3/4;
+    }
+    .projects h3{
+        text-align: center;
     }
 }
