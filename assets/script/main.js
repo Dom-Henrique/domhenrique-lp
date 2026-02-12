@@ -13,3 +13,8 @@ function playMusic(){
     }
     playing = !playing;
 }
+
+// Atualizar automaticamente o ano de copyright
+let copyright = document.querySelector(".copyright");
+const displaYear = new Date();
+copyright.innerText = `© Dom Henrique | ${displaYear.getFullYear()}`
