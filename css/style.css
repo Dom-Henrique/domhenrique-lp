@@ -397,7 +397,7 @@ footer{
     flex-direction: row-reverse;
 }
 .projects div{
-     width: 600px;
+    width: 800px;
 }
 .projects a{
     transition: .4s;
@@ -470,12 +470,16 @@ body.dark-mode .logotipo:hover{
         display: none;
     }
     header{
-        font-size: 16px;
+        font-size: 14px;
         align-items: center;
         justify-content: center;
         min-width: 300px;
         width: 100%;
         position: static;
+    }
+    .nav-bar{
+        min-width: 300px;
+        width: 50%
     }
     .darkMode{
         display: none;
@@ -539,7 +543,7 @@ body.dark-mode .logotipo:hover{
         min-width: 300px;
         width: 70%;
     }
-    .explanation:hover{
+    .mc .explanation:hover, .end .explanation:hover{
         transform: none;
     }
     .end img, .mc img{
@@ -584,5 +588,8 @@ body.dark-mode .logotipo:hover{
     }
     .social-media{
         grid-template-columns: repeat(4, 1fr);
+    }
+    .briefing{
+        margin: 0px;
     }
 }
