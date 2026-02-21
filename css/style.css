@@ -12,12 +12,12 @@ html {
     scroll-behavior: smooth;
 }
 
-main>section {
+main>section:not(.presentation) {
     opacity: 0;
     transition: .6s ease;
 }
 
-main>section.show{
+main>section:not(.presentation).show {
     opacity: 1;
     transition: .6s ease;
 }
@@ -453,6 +453,7 @@ main {
     width: 600px;
     text-align: justify;
     transition: .4s;
+    font-size: 24px;
 }
 
 .explanation:hover {
@@ -581,13 +582,21 @@ body.dark-mode .logotipo:hover {
         align-items: center;
     }
 
-    .banner img {
-        min-width: 300px;
-        width: 50%;
-    }
-
     .introduction {
         background-image: none;
+        min-width: 300px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #about-me{
+        min-width: 300px;
+        width: 100%;
+    }
+
+    .introduction img {
+        min-width: 300px;
+        width: 50%
     }
 
     .logotipo {
@@ -595,17 +604,7 @@ body.dark-mode .logotipo:hover {
     }
 
     header {
-        font-size: 14px;
-        align-items: center;
-        justify-content: center;
-        min-width: 300px;
-        width: 100%;
-        position: static;
-    }
-
-    .nav-bar {
-        min-width: 300px;
-        width: 50%
+        display: none;
     }
 
     .darkMode {
@@ -614,6 +613,7 @@ body.dark-mode .logotipo:hover {
 
     .briefing {
         flex-direction: column;
+        margin: 0 auto;
     }
 
     .about-me h2 {
@@ -687,7 +687,7 @@ body.dark-mode .logotipo:hover {
 
     .explanation {
         min-width: 300px;
-        width: 70%;
+        width: 90%;
     }
 
     .mc .explanation:hover,
@@ -717,7 +717,7 @@ body.dark-mode .logotipo:hover {
 
     .projects {
         padding: 0px;
-        min-width: 400px;
+        min-width: 300px;
         width: 100%;
     }
 
@@ -733,6 +733,10 @@ body.dark-mode .logotipo:hover {
         gap: 0px;
         font-size: 20px;
         align-items: center;
+    }
+
+    .projects div{
+        width: 300px;
     }
 
     .projects img {
