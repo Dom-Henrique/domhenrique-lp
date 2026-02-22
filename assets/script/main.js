@@ -1,15 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
-  music = document.querySelector(".cbj");
+  cbj = document.querySelector(".cbj");
+  kv = document.querySelector(".kv");
 });
 
 
 let playing = false;
 
-function playMusic(){
+function playCBJ(){
     if (!playing){
-        music.play();
+        cbj.play();
     } else{
-        music.pause()
+        cbj.pause();
+    }
+    playing = !playing;
+}
+
+function playKV(){
+    if (!playing){
+        kv.play();
+    } else{
+        kv.pause();
     }
     playing = !playing;
 }
