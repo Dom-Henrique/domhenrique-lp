@@ -333,7 +333,8 @@ main {
 
 .hobbies h2,
 .art-title,
-.projects h2 {
+.projects h2,
+.education h2 {
     text-align: center;
     font-size: 50px;
 }
@@ -383,7 +384,7 @@ main {
     width: 400px;
 }
 
-.cbj {
+.cbj, .kv {
     visibility: hidden
 }
 
@@ -563,6 +564,59 @@ body.dark-mode .logotipo:hover {
     color: cyan;
 }
 
+.institutes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    place-items: center;
+}
+
+.institutes figure{
+    height: fit-content;
+}
+
+.institutes img {
+    height: 100px;
+    transition: .4s;
+}
+
+.institutes img:hover{
+    transform: scale(1.2);
+    transition: .4s;
+}
+
+.institutes>div{
+    display: flex;
+    width: 700px;
+    text-align: justify;
+}
+
+.description>h3, .description>h4{
+    margin: 12px 0 12px 0;
+}
+
+.description a{
+    text-decoration: none;
+    color: var(--primary);
+    transition: .4s;
+}
+
+.education a:hover:nth-child(2n){
+    color: rgb(0, 128, 255);
+    transition: .4s;
+}
+
+.education a:hover:nth-child(2n+1){
+    color: green;
+    transition: .4s;
+}
+
+.fafic{
+    object-fit: cover;
+    object-position: 0% 0%;
+    aspect-ratio: 1/1;
+}
+
 @media (min-width:300px) and (max-width: 840px) {
     body {
         width: 100%;
@@ -589,7 +643,7 @@ body.dark-mode .logotipo:hover {
         margin: 0 auto;
     }
 
-    #about-me{
+    #about-me {
         min-width: 300px;
         width: 100%;
     }
@@ -735,7 +789,7 @@ body.dark-mode .logotipo:hover {
         align-items: center;
     }
 
-    .projects div{
+    .projects div {
         width: 300px;
     }
 
