@@ -384,7 +384,8 @@ main {
     width: 400px;
 }
 
-.cbj, .kv {
+.cbj,
+.kv {
     visibility: hidden
 }
 
@@ -451,7 +452,8 @@ main {
 }
 
 .explanation {
-    width: 600px;
+    min-width: 300px;
+    width: 80%;
     text-align: justify;
     transition: .4s;
     font-size: 24px;
@@ -571,7 +573,7 @@ body.dark-mode .logotipo:hover {
     place-items: center;
 }
 
-.institutes figure{
+.institutes figure {
     height: fit-content;
 }
 
@@ -580,27 +582,29 @@ body.dark-mode .logotipo:hover {
     transition: .4s;
 }
 
-.institutes img:hover{
+.institutes img:hover {
     transform: scale(1.2);
     transition: .4s;
 }
 
-.institutes>div{
+.institutes>div {
     display: flex;
     width: 700px;
     text-align: justify;
 }
 
-.description>h3, .description>h4{
+.description>h3,
+.description>h4 {
     margin: 12px 0 12px 0;
 }
 
-.description a{
+.description a {
     text-decoration: none;
     color: var(--primary);
     transition: .4s;
 }
 
+/*
 .education a:hover:nth-child(2n){
     color: rgb(0, 128, 255);
     transition: .4s;
@@ -610,133 +614,163 @@ body.dark-mode .logotipo:hover {
     color: green;
     transition: .4s;
 }
-
-.fafic{
+*/
+.fafic {
     object-fit: cover;
     object-position: 0% 0%;
     aspect-ratio: 1/1;
 }
 
+.institutes {
+    margin: 100px 0 100px 0;
+}
+
 @media (min-width:300px) and (max-width: 840px) {
     body {
+        font-size: 30px;
+        margin: 0 auto;
+        min-width: 300px;
         width: 100%;
-        margin: 0 auto;
-    }
-
-    .presentation h1,
-    .presentation h2 {
-        font-size: 20px;
-        line-height: 10px;
-    }
-
-    .banner {
-        flex-direction: column;
-        margin: 0 auto;
-        justify-content: center;
-        align-items: center;
     }
 
     .introduction {
         background-image: none;
-        min-width: 300px;
-        width: 100%;
-        margin: 0 auto;
-    }
-
-    #about-me {
-        min-width: 300px;
-        width: 100%;
-    }
-
-    .introduction img {
-        min-width: 300px;
-        width: 50%
-    }
-
-    .logotipo {
-        display: none;
     }
 
     header {
         display: none;
     }
 
-    .darkMode {
+    .banner {
+        flex-direction: column-reverse;
+    }
+
+    .banner img {
         display: none;
+    }
+
+    .presentation h1,
+    .presentation h2 {
+        flex-direction: column-reverse;
+        margin: 0px;
+        font-size: 25px;
     }
 
     .briefing {
         flex-direction: column;
-        margin: 0 auto;
+        min-width: 300px;
+        gap: 0px;
+        margin: 50px 0 0 0;
+    }
+
+    .briefing img {
+        min-width: 300px;
+        width: 80%;
+    }
+
+    .me ul {
+        min-width: 300px;
+        width: 80%;
+        font-size: 20px;
+    }
+
+    .me{
+        min-width: 300px;
+    }
+
+    .techs ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        min-width: 300px;
+    }
+
+    .techs i{
+        font-size: 50px;
+    }
+
+    .social-media {
+        grid-template-columns: repeat(4, 1fr);
+        margin: 0px;
+        min-width: 300px;
+        gap: 0px;
+    }
+
+    .lkd i,
+    .bhc i,
+    .github i,
+    .insta i {
+        width: 50px;
+        height: 50px;
+        font-size: 40px;
+        padding: 4px;
+    }
+
+    .about-me {
+        flex-direction: column-reverse;
+        min-width: 300px;
+        padding: 0px
+    }
+
+    .about-me img {
+        min-width: 300px;
+        width: 70%;
     }
 
     .about-me h2 {
         text-align: center;
     }
 
-    .briefing img {
+    .text {
+        margin: 20px
+    }
+
+    .education {
         display: none;
-    }
-
-    .about-me {
-        flex-direction: column-reverse;
-        min-width: 300px;
-        width: 100%;
-        font-size: 20px;
-        text-align: justify;
-        padding: 0 20px 0 20px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .end,
-    .mc {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .end img,
-    .mc img {
-        width: 300px;
-    }
-
-    .end img:hover,
-    .mc img:hover {
-        transform: translateY(10px) translateX(0);
-    }
-
-    .end h2,
-    .mc h2 {
-        text-align: center;
-    }
-
-    .me {
-        text-align: center;
-    }
-
-    .techs ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 50px;
-        column-gap: 50px;
-    }
-
-    .avatar2nd {
-        width: 100%;
-        max-width: 412px;
     }
 
     .hobbies ul {
         grid-template-columns: repeat(1, 1fr);
-        row-gap: 1px;
-        width: fit-content;
-        column-gap: 1px;
     }
 
-    .hobbies i,
-    .hobbies p {
-        font-size: 60px;
+    .projects {
+        padding: 0px;
+        min-width: 300px;
+        width: fit-content;
+        margin: 0 auto;
+    }
+
+    .projects li:nth-child(2n) {
+        flex-direction: column-reverse;
+        gap: 0px;
+        font-size: 20px;
+        align-items: center;
+        min-width: 300px;
+        padding: 0px;
+        margin: 50px 0 50px 0 auto;
+    }
+
+    .projects li:nth-child(2n+1) {
+        flex-direction: column-reverse;
+        gap: 0px;
+        font-size: 20px;
+        align-items: center;
+        min-width: 300px;
+        padding: 0px;
+        margin: 50px 0 50px 0 auto;
+    }
+
+    .projects div {
+        width: 300px;
+    }
+
+    .projects img {
+        min-width: 300px;
+        width: 80%;
+        aspect-ratio: 4/3;
+    }
+
+    .projects h3 {
+        text-align: center;
     }
 
     .explanation {
@@ -765,49 +799,26 @@ body.dark-mode .logotipo:hover {
         transform: none;
     }
 
-    .text {
-        width: 80%
-    }
-
-    .projects {
-        padding: 0px;
-        min-width: 300px;
-        width: 100%;
-    }
-
-    .projects li:nth-child(2n) {
+    .end,
+    .mc {
         flex-direction: column-reverse;
-        gap: 0px;
-        font-size: 20px;
+        justify-content: center;
         align-items: center;
     }
 
-    .projects li:nth-child(2n+1) {
-        flex-direction: column-reverse;
-        gap: 0px;
-        font-size: 20px;
-        align-items: center;
-    }
-
-    .projects div {
-        width: 300px;
-    }
-
-    .projects img {
+    .end img,
+    .mc img {
         min-width: 300px;
-        width: 100%;
-        aspect-ratio: 4/3;
+        width: 80%;
     }
 
-    .projects h3 {
+    .end img:hover,
+    .mc img:hover {
+        transform: translateY(10px) translateX(0);
+    }
+
+    .end h2,
+    .mc h2 {
         text-align: center;
-    }
-
-    .social-media {
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .briefing {
-        margin: 0px;
     }
 }
