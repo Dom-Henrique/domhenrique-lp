@@ -9,6 +9,7 @@ let playing = false;
 function playCBJ(){
     if (!playing){
         cbj.play();
+        kv.pause()
     } else{
         cbj.pause();
     }
@@ -18,6 +19,7 @@ function playCBJ(){
 function playKV(){
     if (!playing){
         kv.play();
+        cbj.pause()
     } else{
         kv.pause();
     }
