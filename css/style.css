@@ -1,10 +1,10 @@
 :root {
-    --primary: #d0d0d0;
-    --secondary: #202020;
+    --primary: #e4dded;
+    --secondary: #201c26;
     --myshadow: #212121;
     --glow: #ffffff4d;
     --glass: #1313139f;
-    --red: #ab3232;
+    --red: #8941fe;
     --bege: #c2997a;
 }
 
@@ -98,7 +98,7 @@ body.dark-mode header {
 }
 
 .nav-bar a:hover {
-    color: rgb(231, 55, 55)
+    color: var(--red)
 }
 
 body.dark-mode .nav-bar a:hover {
@@ -124,7 +124,7 @@ body.dark-mode .nav-bar a:hover {
 .menu-link:hover::after {
     width: 100%;
     transition: .4s;
-    background-color: rgb(231, 55, 55);
+    background-color: var(--red);
 }
 
 body.dark-mode .menu-link:hover::after {
@@ -442,6 +442,10 @@ main {
     box-shadow: 0px 0px 60px var(--glow);
 }
 
+.end h2, .mc h2{
+    text-transform: uppercase;
+}
+
 #end-image,
 #cm-image {
     background-color: transparent;
@@ -627,205 +631,295 @@ body.dark-mode .logotipo:hover {
     margin: 100px 0 100px 0;
 }
 
-@media (min-width:300px) and (max-width: 840px) {
-    body {
-        font-size: 30px;
-        margin: 0 auto;
-        min-width: 300px;
+.italic{
+    font-style: italic;
+    font-weight: bold;
+}
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+
+    .presentation h1,
+    .presentation h2 {
+        font-size: 56px;
+        line-height: 1.2;
+    }
+
+    .presentation h3 {
+        font-size: 24px;
+    }
+
+    .myavatar,
+    .briefing>img {
+        width: 350px;
+    }
+
+    .briefing {
+        gap: 40px;
+        margin: 60px 0;
+    }
+
+    .about-me {
+        gap: 40px;
+        padding: 0 3rem;
+        margin: 60px 0;
+    }
+
+    .about-me h2 {
+        font-size: 40px;
+    }
+
+    .about-me p {
+        font-size: 18px;
+    }
+
+    .hobbies h2,
+    .art-title,
+    .projects h2,
+    .education h2 {
+        font-size: 40px;
+    }
+
+    .techs ul,
+    .design ul {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .hobbies ul {
+        column-gap: 40px;
+    }
+
+    .hobby {
+        margin: 50px 0;
+    }
+
+    .album img {
+        width: 280px;
+    }
+
+    .end,
+    .mc {
+        margin: 60px 40px;
+        gap: 30px;
+    }
+
+    .end img,
+    .mc img {
+        width: 300px;
+    }
+
+    .explanation {
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .projects li {
+        padding: 40px;
+        gap: 40px;
+        font-size: 22px;
+    }
+
+    .projects div,
+    .projects img {
         width: 100%;
     }
 
-    .introduction {
-        background-image: none;
+    .institutes {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin: 60px 0;
     }
 
+    .institutes>div {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
     header {
-        display: none;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .nav-bar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 5px;
+        font-size: 14px;
+    }
+
+    main {
+        margin: 130px 0 60px 0;
     }
 
     .banner {
-        flex-direction: column-reverse;
-    }
-
-    .banner img {
-        display: none;
+        flex-direction: column;
     }
 
     .presentation h1,
     .presentation h2 {
-        flex-direction: column-reverse;
-        margin: 0px;
-        font-size: 25px;
+        font-size: 36px;
     }
 
-    .briefing {
-        flex-direction: column;
-        min-width: 300px;
-        gap: 0px;
-        margin: 50px 0 0 0;
-    }
-
-    .briefing img {
-        min-width: 300px;
-        width: 80%;
-    }
-
-    .me ul {
-        min-width: 300px;
-        width: 80%;
+    .presentation h3 {
         font-size: 20px;
     }
 
-    .me{
-        min-width: 300px;
+    .myavatar,
+    .briefing>img {
+        width: 220px;
     }
 
-    .techs ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        min-width: 300px;
-    }
-
-    .techs i{
-        font-size: 50px;
+    .myavatar {
+        margin: 2rem 0;
     }
 
     .social-media {
-        grid-template-columns: repeat(3, 1fr);
-        margin: 0px;
-        min-width: 300px;
-        gap: 0px;
+        grid-template-columns: repeat(4, auto);
+        gap: 12px;
     }
 
     .lkd i,
     .bhc i,
     .github i,
     .insta i {
-        width: 50px;
-        height: 50px;
-        font-size: 40px;
-        padding: 4px;
+        width: 35px;
+        height: 35px;
+        font-size: 28px;
     }
 
+    .briefing,
     .about-me {
-        flex-direction: column-reverse;
-        min-width: 300px;
-        padding: 0px
-    }
-
-    .about-me img {
-        min-width: 300px;
-        width: 70%;
+        flex-direction: column;
+        gap: 30px;
+        padding: 0 1.5rem;
+        margin: 40px 0;
     }
 
     .about-me h2 {
+        font-size: 32px;
         text-align: center;
     }
 
-    .text {
-        margin: 20px
+    .about-me p {
+        font-size: 16px;
     }
 
-    .education {
-        display: none;
+    .me {
+        font-size: 22px;
+    }
+
+    .techs i {
+        font-size: 40px;
+    }
+
+    .design {
+        margin: 2rem 0;
+    }
+
+    .hobbies h2,
+    .art-title,
+    .projects h2,
+    .education h2 {
+        font-size: 32px;
     }
 
     .hobbies ul {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
     }
 
-    .projects {
-        padding: 0px;
-        min-width: 300px;
-        width: fit-content;
-        margin: 0 auto;
+    .hobby {
+        font-size: 16px;
+        gap: 20px;
+        margin: 30px 0;
     }
 
-    .projects li:nth-child(2n) {
-        flex-direction: column-reverse;
-        gap: 0px;
-        font-size: 20px;
-        align-items: center;
-        min-width: 300px;
-        padding: 0px;
-        margin: 100px 0 100px 0;
+    .hobby i {
+        font-size: 50px;
     }
 
-    .projects li:nth-child(2n+1) {
-        flex-direction: column-reverse;
-        gap: 0px;
-        font-size: 20px;
-        align-items: center;
-        min-width: 300px;
-        padding: 0px;
-        margin: 100px 0 100px 0;
+    .album img {
+        width: 150px;
+    }
+    .end,
+    .mc {
+        flex-direction: column;
+        margin: 40px 20px;
+        gap: 20px;
     }
 
-    .projects div {
-        min-width: 300px;
-        width: 90%;
-    }
-
-    .projects img {
-        min-width: 300px;
-        width: 90%;
-        aspect-ratio: 4/3;
-    }
-
-    .projects h3 {
-        text-align: center;
+    .end img,
+    .mc img {
+        width: 100%;
+        max-width: 320px;
     }
 
     .explanation {
-        min-width: 300px;
-        width: 90%;
+        min-width: 0;
+        font-size: 17px;
     }
 
+    .projects li,
+    .projects li:nth-child(2n),
+    .projects li:nth-child(2n+1) {
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 20px;
+        font-size: 18px;
+    }
+    .institutes {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        margin: 40px 0;
+    }
+
+    .institutes>div {
+        width: auto;
+    }
+
+    .institutes img {
+        height: 70px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+    .explanation:hover,
     .mc .explanation:hover,
-    .end .explanation:hover {
-        transform: none;
-    }
-
-    .end img,
-    .mc img {
-        min-width: 400px;
-        width: 60%
-    }
-
-    #end-image:hover {
-        cursor: default;
-        transform: none;
-    }
-
+    #end-image:hover,
     #cm-image:hover {
-        cursor: default;
         transform: none;
     }
+}
 
-    .end,
-    .mc {
-        flex-direction: column-reverse;
-        justify-content: center;
-        align-items: center;
-        margin-top: 0;
-        margin-bottom: 0;
-        margin-left: 0;
-        margin-right: 0;
+@media (max-width: 480px) {
+
+    .presentation h1,
+    .presentation h2 {
+        font-size: 28px;
     }
 
-    .end img,
-    .mc img {
-        min-width: 300px;
-        width: 90%;
+    .nav-bar {
+        font-size: 13px;
+        gap: 8px;
     }
 
-    .end img:hover,
-    .mc img:hover {
-        transform: translateY(10px) translateX(0);
+    .hobbies ul {
+        grid-template-columns: 1fr;
     }
 
-    .end h2,
-    .mc h2 {
-        text-align: center;
+    .projects li,
+    .projects li:nth-child(2n),
+    .projects li:nth-child(2n+1) {
+        font-size: 16px;
+    }
+
+    .explanation {
+        font-size: 16px;
     }
 }
